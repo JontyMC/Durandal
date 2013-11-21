@@ -1,10 +1,10 @@
 ﻿<section>
-    <h2 data-bind="html: displayName"></h2>
+    <h2 data-test="displayName" data-bind="html: displayName"></h2>
     <div class="row-fluid">
         <ul class="thumbnails" data-bind="foreach: images">
             <li>
-                <a href="#" class="thumbnail" data-bind="click:$parent.select">
-                    <img style="width: 260px; height: 180px;" data-bind="attr: { src: media.m }"/>
+                <a data-test="image" href="#" class="thumbnail" data-bind="click:$parent.select">
+                    <img  style="width: 260px; height: 180px;" data-bind="attr: { src: media.m }"/>
                 </a>
             </li>
         </ul>
