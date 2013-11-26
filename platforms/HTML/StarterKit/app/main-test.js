@@ -10,7 +10,8 @@
         'scenario': '../test/scenario',
         'chai': '../lib/chai',
         'test': '../test',
-        'tests': '../test/tests'  
+        'tests': '../test/tests',
+        'plugins/http': '../test/data/mockHttp' 
     },
     shim: {
         'bootstrap': {

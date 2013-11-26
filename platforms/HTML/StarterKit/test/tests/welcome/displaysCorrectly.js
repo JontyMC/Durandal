@@ -1,6 +1,9 @@
 define(['jquery', 'scenario/scenario', 'scenario/assert', 'test/model/app', 'viewmodels/welcome', 'test/model/Welcome'], function ($, scenario, assert, appModel, welcome, WelcomeModel) {
 
 var welcomeViewModel;
+var metadata = {
+    feature: 'Welcome Page'
+}
 
 scenario('Displays correctly', function () {
     'When the welcome page is displayed'._(function () {
@@ -22,6 +25,6 @@ scenario('Displays correctly', function () {
             assert.equal(featureList.eq(index).text(), value);
         });
     });
-});
+}, metadata);
 
 });

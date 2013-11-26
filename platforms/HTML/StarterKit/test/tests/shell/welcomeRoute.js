@@ -1,4 +1,8 @@
-define(['scenario/scenario', 'scenario/assert', 'test/model/app', 'plugins/router', 'viewmodels/shell', 'test/model/Shell',], function (scenario, assert, appModel, router, shell, ShellModel) {
+define(['scenario/scenario', 'scenario/assert', 'test/model/app', 'plugins/router', 'viewmodels/shell', 'viewmodels/welcome', 'test/model/Shell', 'test/model/waitFor'], function (scenario, assert, appModel, router, shell, welcome, ShellModel, waitFor) {
+
+var metadata = {
+    feature: 'Shell Navigation'
+}
 
 scenario('Welcome route', function () {
     'Given an empty route is supplied'._(function () {
@@ -6,12 +10,12 @@ scenario('Welcome route', function () {
     });
 
     'When the shell is loaded'._(function () {
-        return appModel.setRoot(shell, ShellModel);
+        appModel.setRoot(shell, ShellModel);
     });
 
     'Then the welcome page is displayed'._(function (shellModel) {
-        
+        waitFor.view(new welcome());
     });
-});
+}, metadata);
 
 });
