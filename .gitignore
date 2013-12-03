@@ -35,3 +35,4 @@ docs/api*
 !*.ps1
 
 !platforms/Microsoft.NET/StarterKit/vsix/DurandalMvcSpaTemplateVsix/packages
+!platforms/HTML/StarterKit/test/data/Builder.js
