@@ -30,7 +30,7 @@ body {margin: 10px;}
         <span class="panel-title">
           <a data-toggle="collapse" data-target="#@scenarioId" href="#@scenarioId">Scenario: @scenario.Title</a>
         </span>
-        <a href="@Model.Domain@Model.HtmlPage#@scenario.Id" target="_blank"><i class="glyphicon glyphicon-play"></i> Run</a>
+        <a href="@Model.HtmlPage#@scenario.Id" target="_blank"><i class="glyphicon glyphicon-play"></i> Run</a>
       </div>
       <div id="@scenarioId" class="panel-body collapse">
         @{ var i = 0; }
